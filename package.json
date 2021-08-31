@@ -7,17 +7,9 @@
     "cy:headless": "cypress run",
     "cy:open": "cypress open"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mizael2019/nmsc.git"
-  },
   "keywords": [],
-  "author": "Mizael",
+  "author": "Mizael Tobias",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mizael2019/nmsc/issues"
-  },
-  "homepage": "https://github.com/Mizael2019/nmsc#readme",
   "devDependencies": {
     "cypress": "^8.3.1"
   }
