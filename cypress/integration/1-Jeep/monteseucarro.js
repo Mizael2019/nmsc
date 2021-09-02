@@ -19,6 +19,7 @@ describe('Acessa NMSC', () => {
 
 
   it('Seleciono cor', () => {
+    cy.wait(4000)
     cy.get(':nth-child(4) > .styles__Box-sc-cdg6y1-3 > .styles__Check-sc-cdg6y1-1 > img').click( {force: true} )
     cy.contains('AZUL JAZZ').click()
 });
