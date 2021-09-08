@@ -6,6 +6,10 @@ describe('Acessa NMSC', () => {
     cy.visit('/')
   });
 
+  beforeEach(() => {
+    cy.reload()
+})
+
   it('Seleciono localização e versão', () => {
     cy.get('.style__FixedButton-sc-14douyw-2 > button').click( {force: true} )
     cy.get('input').type('Rio de Janeiro')
@@ -16,18 +20,18 @@ describe('Acessa NMSC', () => {
     cy.get('.styles__Container-sc-168ooz8-0 > button').click( {force: true} )
   });
 
-  it('Seleciono cor', () => {
+  it('Cor', () => {
     cy.wait(4000)
     cy.get(':nth-child(4) > .styles__Box-sc-cdg6y1-3 > .styles__Check-sc-cdg6y1-1 > img').click( {force: true} )
-    cy.contains('AZUL JAZZ').click()
+    cy.contains('PRETO CARBON').click().should('have.text', 'PRETO CARBON')
   });
 
-  it('Escolho opcionais', () => {
+  it('Kit Opcionais', () => {
     cy.get('.styles__Container-sc-168ooz8-0 > button').click( {force: true} )
     cy.get(':nth-child(2) > .styles__Box-sc-cdg6y1-3 > .styles__Check-sc-cdg6y1-1 > img').click( {force: true} )
   });
 
-  it('Escolho acessórios', () => {
+  it('Acessórios', () => {
     cy.get('.styles__Container-sc-168ooz8-0 > button').click( {force: true} )
     cy.get(':nth-child(4) > .styles__Container-sc-cdg6y1-0 > .styles__Box-sc-cdg6y1-3 > .styles__Check-sc-cdg6y1-1 > img')
     .click( {force: true} )
@@ -35,13 +39,9 @@ describe('Acessa NMSC', () => {
     .click( {force: true} )
   });
 
-
-
-
-  
-  it('Clico em resumo', () => {
+  it('Resumo', () => {
     cy.get('.styles__Container-sc-1nd1h4r-0 > button').click( {force: true} )
-
+    cy.get('#pageSectionTitle').should('have.text', 'RESUMO')
   });
 
 
