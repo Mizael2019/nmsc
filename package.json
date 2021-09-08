@@ -1,10 +1,10 @@
 {
   "name": "jeep",
   "version": "1.0.0",
-  "description": "- Repo para demostrar conhecimentos em automação de testes.",
+  "description": "- Repo para demonstrar conhecimentos em automação de testes.",
   "main": "index.js",
   "scripts": {
-    "cy:headless": "cypress run",
+    "cy:headless": "cypress run", 
     "cy:open": "cypress open"
   },
   "keywords": [],
