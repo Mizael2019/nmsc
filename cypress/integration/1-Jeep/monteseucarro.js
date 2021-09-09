@@ -4,11 +4,8 @@
 describe('Acessa NMSC', () => {
   before(() => {
     cy.visit('/')
-  });
-
-  beforeEach(() => {
     cy.reload()
-})
+  });
 
   it('Seleciono localização e versão', () => {
     cy.get('.style__FixedButton-sc-14douyw-2 > button').click( {force: true} )
@@ -23,7 +20,7 @@ describe('Acessa NMSC', () => {
   it('Cor', () => {
     cy.wait(4000)
     cy.get(':nth-child(4) > .styles__Box-sc-cdg6y1-3 > .styles__Check-sc-cdg6y1-1 > img').click( {force: true} )
-    cy.contains('PRETO CARBON').click().should('have.text', 'PRETO CARBON')
+    cy.contains('PRETO CARBON').click()
   });
 
   it('Kit Opcionais', () => {
@@ -41,10 +38,40 @@ describe('Acessa NMSC', () => {
 
   it('Resumo', () => {
     cy.get('.styles__Container-sc-1nd1h4r-0 > button').click( {force: true} )
-    cy.get('#pageSectionTitle').should('have.text', 'RESUMO')
   });
 
 
 
+
+  it('Formulário Lead', () => {
+    cy.get('.styles__Container-sc-1nd1h4r-0 > button').click( {force: true} )
+
+
+    cy.get('#nome').as('nome').type('Mizael Tobias Nazareno')
+    cy.get('#e-mail').as('email').type('mizael.nazareno@avenuecode.com')
+    cy.get('#telefone').as('numerotelefone').type('21333333333')
+    //cy.get('#person-type')
+
+
+
+   // cy.contains('Pessoa Física').click( {force: true} )
+
+
+
+
+   // cy.get('#cpf\/cnpj').as('cpf\cnpj').type('12345678900')
+    //cy.get('.styles__ButtonUserLocation-sc-1hvs87e-4').click( {force: true} )
+    //cy.wait(2000)
+    //cy.get('.bVndAO > input').click( {force: true} )
+    //cy.get('.styles__ButtonSend-sc-1hvs87e-14').click( {force: true} )
+
+
+
+
+
+
+
+
+  });
   });
   
