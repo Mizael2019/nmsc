@@ -57,16 +57,6 @@ describe('Acessa NMSC', () => {
     cy.wait(2000)
     cy.get('.bVndAO > input').click( {force: true} ).scrollIntoView()
     cy.get('.styles__ButtonSend-sc-1hvs87e-14').click( {force: true} )
-
-
-
     cy.contains('SUA PROPOSTA FOI ENVIADA').should('have.text','SUA PROPOSTA FOI ENVIADA')
-    
-    
-
-
-
-
   });
   });
-  
