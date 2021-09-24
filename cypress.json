@@ -5,5 +5,5 @@
     "responseTimeout": 15000,
     "requestTimeout": 7000,
     "defaultCommandTimeout": 10000,
-    "pageLoadTimeout": 6000
+    "pageLoadTimeout": 7000
   }

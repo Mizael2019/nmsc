@@ -1,6 +1,4 @@
 /// <reference types="cypress" />
-
-
 describe('Acessa NMSC', () => {
   before(() => {
     cy.visit('/')
