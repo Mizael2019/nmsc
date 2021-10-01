@@ -50,7 +50,6 @@ describe('Acessa NMSC', () => {
     cy.get('@email').should('be.empty')
     cy.get('@numerotelefone').should('be.empty')
     cy.get('@cpf').should('be.empty')
-
     cy.get('.styles__ButtonUserLocation-sc-1hvs87e-4').click( {force: true} )
     cy.wait(2000)
     cy.get('.bVndAO > input').click( {force: true} )

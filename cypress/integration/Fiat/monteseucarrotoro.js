@@ -45,8 +45,6 @@ describe('Acessa NMSC', () => {
     cy.get('button > p').click( {force: true} )
   });
 
-
-
     it('Formulário Lead', () => {
       cy.get('.styles__Container-sc-xn9m9t-0 > button').click( {force: true} )
       cy.get('#nome').as('nome').type('Mizael Tobias Nazareno')
@@ -54,14 +52,9 @@ describe('Acessa NMSC', () => {
       cy.get('#telefone').as('numerotelefone').type('21777777777')
       cy.get('#person-type').as('tipoPessoa').select('Pessoa Física')
       cy.get('input[name="cpf"]').as('cpf').type('00987654321')
-      cy.get('.styles__ScrollBody-sc-1tamnkh-2')
-
-      
-      cy.get('@nome').should('be.empty')
-      cy.get('@email').should('be.empty')
-      cy.get('@numerotelefone').should('be.empty')
-      cy.get('@cpf').should('be.empty')
-  
-
+      cy.get('.styles__ButtonUserLocation-sc-1l1w0zh-6').click( {force: true} )
+      cy.get(':nth-child(3) > [type="radio"]').click( {force: true} )
+      cy.get('.styles__ButtonSend-sc-1l1w0zh-15').click( {force: true} )
+      cy.contains('SUA PROPOSTA FOI ENVIADA').should('have.text','SUA PROPOSTA FOI ENVIADA')
     });
   });
