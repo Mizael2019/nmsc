@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 describe('Acessa NMSC', () => {
   before(() => {
-    cy.visit('/')
+    cy.visit('https://compass.jeep.com.br/novomonte/versao')
     //cy.reload()
   });
 
