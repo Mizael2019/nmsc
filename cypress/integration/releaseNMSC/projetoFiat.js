@@ -5,7 +5,7 @@ describe('Teste do NMSC em ambiente Release', () => {
         cy.visit('/')
     });
 
-    it('Deve realizar Login AEM com sucesso', () => {
+    it('Login AEM', () => {
         cy.get('#username').type('admin', {log: false})
         cy.get('#password').type('admin', {log: false})
         cy.get('#submit-button').click()
@@ -16,17 +16,18 @@ describe('Teste do NMSC em ambiente Release', () => {
         cy.get('[href="javascript:;"]').click()
         cy.contains('Rio de Janeiro - RJ').click()
         cy.get('.location-confirm > .hub-button__label').click()
+        cy.get('.hub-info-bar__close-btn > .hub-button').click()
     });   
 
     it('Escolher a versão do carro', () => {
-        cy.get('#test-id-car-showcase-card')
-        cy.contains(' ULTRA ').click()
+        cy.get(':nth-child(7) > .car-showcase-card--content').click()
+        cy.contains('NOVO TORO VOLCANO 2.0 AT9 4X4 DIESEL 4P 2020').click()
     });    
 
     it('Escolho a cor', () => {
         cy.get('#test-id-step-color').click()
-        cy.get('#test-id-card-showcase-color > :nth-child(4)').click()
-        // cy.contains(' PRETO CARBON ').click()
+        cy.get('#test-id-card-showcase-color > :nth-child(3)').click()
+        cy.contains(' AZUL JAZZ ').click()
     }); 
 
 
