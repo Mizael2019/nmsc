@@ -30,9 +30,26 @@ describe('Teste do NMSC em ambiente Release', () => {
         cy.contains(' AZUL JAZZ ').click()
     }); 
 
+    it('Kit Opcionais', () => {
+        cy.get('#test-id-step-optionals').click( {force: true} )
+        cy.get('[price="3500"] > .car-showcase-card--content').click()
+      });
 
+      it('Acessórios', () => {
+        cy.get('#test-id-step-accessories').click( {force: true})
+        cy.get(':nth-child(2) > .car-showcase-card--content').click( {force: true})
+        cy.get('.list-grid > :nth-child(6)').click( {force: true})
+      });
 
+      it('Revestimentos', () => {
+        cy.get('.car-showcase-details-container__action-btn > [data-v-6377c908=""]').click( {force: true})
+        cy.contains('próximo: Resumo').should('have.text', 'próximo: Resumo')
+      });
 
+    //   it('Resumo', () => {
+    //     cy.get('.car-showcase-details-container__action-btn > [data-v-6377c908=""]').click( {force: true})
+        
+    //   });
 
 
 });
