@@ -37,6 +37,7 @@ cache/twig/
 cypress/videos
 cypress/screenshots
 cypress.env.json
+downloads
 
 # Reports
 .feature-express

@@ -1,10 +1,9 @@
 {    "baseUrl": "http://release-nmsc.green.uat.fcagil.avenuecode.com:4502/content/fiat/BR/pt/products/358-novomonte.html?wcmmode=disabled#versao",
     "chromeWebSecurity": false,
-    "viewportWidth": 1400,
+    "viewportWidth": 1200,
     "viewportHeight": 900,
     "responseTimeout": 15000,
     "requestTimeout": 7000,
     "defaultCommandTimeout": 10000,
-    "pageLoadTimeout": 10000,
     "watchForFileChanges" :true
   }
